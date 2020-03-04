@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Card } from "../component/card.js";
 
-export const Overall = () => {
+export const People = () => {
 	const [list, setList] = useState([]);
 
 	useEffect(() => {
-		fetch("https://swapi.co/api/starships/")
+		fetch("https://swapi.co/api/people/")
 			.then(resp => resp.json())
 			.then(data => {
 				setList(data.results);
@@ -17,7 +17,7 @@ export const Overall = () => {
 		<>
 			<div>
 				{list.map((item, index) => {
-					return <Card key={index} name={item.name} model={item.model} />;
+					return <Card key={index} name={item.name} birth_year={item.birth_year} />;
 				})}
 			</div>
 		</>

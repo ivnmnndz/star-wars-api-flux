@@ -8,6 +8,7 @@ export function Card(props) {
 				<div className="card-body">
 					<h5 className="card-title">{props.name}</h5>
 					<p className="card-text">{props.model}</p>
+					<p className="card-text">{props.birth_year}</p>
 				</div>
 			</div>
 		</>
@@ -15,5 +16,6 @@ export function Card(props) {
 }
 Card.propTypes = {
 	name: PropTypes.string,
-	model: PropTypes.string
+	model: PropTypes.string,
+	birth_year: PropTypes.string
 };
