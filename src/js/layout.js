@@ -7,6 +7,8 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import { Starship } from "./views/starship";
 import { People } from "./views/people";
+import { Planets } from "./views/planets";
+import { Details } from "./views/details";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -26,9 +28,11 @@ export const Layout = () => {
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route path="/demo" component={Demo} />
-						<Route path="/single/:theid" component={Single} />
+						<Route path="/single/:ivan" component={Single} />
 						<Route path="/starship" component={Starship} />
 						<Route path="/people" component={People} />
+						<Route path="/planets" component={Planets} />
+						<Route path="/details/:theme/:index" component={Details} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<Footer />

@@ -1,13 +1,19 @@
 import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { Context } from "../store/appContext";
 
-export const Single = props => {
-	const { store, actions } = useContext(Context);
+export const Details = props => {
+	useEffect(() => {
+		fetch("https://swapi.co/api/" + props.match.params.ivan)
+			.then(resp => resp.json())
+			.then(data => {
+				setList(data.results);
+			});
+	}, []);
 	return (
 		<div className="jumbotron">
-			<h1 className="display-4">{props.match.params.ivan}</h1>
+			<h1 className="display-4">{props.match.params.theme}</h1>
+			<h1 className="display-4">{props.match.params.index}</h1>
 
 			<hr className="my-4" />
 
@@ -20,6 +26,6 @@ export const Single = props => {
 	);
 };
 
-Single.propTypes = {
+Details.propTypes = {
 	match: PropTypes.object
 };

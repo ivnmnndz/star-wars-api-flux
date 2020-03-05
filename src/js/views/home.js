@@ -2,12 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const Home = () => (
-	<div className="text-center mt-5">
-		<Link to={"/starship"}>
-			<span>Link to: Starships</span>
-		</Link>
-		<Link to={"/people"}>
-			<span>Link to: People</span>
-		</Link>
+	<div className="text-center mt-5 container">
+		<ul className="list-group">
+			<li>
+				<Link to={"/starship"}>
+					<span>Starships</span>
+				</Link>
+			</li>
+			<li>
+				<Link to={"/people"}>
+					<span>People</span>
+				</Link>
+			</li>
+			<li>
+				<Link to={"/planets"}>
+					<span>Planets</span>
+				</Link>
+			</li>
+		</ul>
 	</div>
 );
