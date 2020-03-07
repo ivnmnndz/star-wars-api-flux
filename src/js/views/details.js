@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const Details = props => {
 	useEffect(() => {
-		fetch("https://swapi.co/api/" + props.match.params.ivan)
+		fetch(`https://swapi.co/api/${props.match.params.id}`)
 			.then(resp => resp.json())
 			.then(data => {
 				setList(data.results);

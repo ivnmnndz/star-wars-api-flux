@@ -17,7 +17,7 @@ export const Starship = () => {
 		<>
 			<div>
 				{list.map((item, index) => {
-					return <Card key={index} emmmm={index + 1} name={item.name} model={item.model} />;
+					return <Card key={index} item={item} />;
 				})}
 			</div>
 		</>
