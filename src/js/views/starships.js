@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Card } from "../component/card.js";
 
-export const Starship = () => {
+export const Starships = () => {
 	const [list, setList] = useState([]);
 
 	useEffect(() => {
@@ -10,6 +10,7 @@ export const Starship = () => {
 			.then(resp => resp.json())
 			.then(data => {
 				setList(data.results);
+				console.log(data.results);
 			});
 	}, []);
 
@@ -17,7 +18,7 @@ export const Starship = () => {
 		<>
 			<div>
 				{list.map((item, index) => {
-					return <Card key={index} item={item} />;
+					return <Card key={index} item={item} type="starships" />;
 				})}
 			</div>
 		</>

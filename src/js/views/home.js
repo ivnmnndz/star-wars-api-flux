@@ -5,7 +5,7 @@ export const Home = () => (
 	<div className="text-center mt-5 container">
 		<ul className="list-group">
 			<li>
-				<Link to={"/starship"}>
+				<Link to={"/starships"}>
 					<span>Starships</span>
 				</Link>
 			</li>

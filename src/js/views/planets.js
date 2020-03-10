@@ -17,7 +17,7 @@ export const Planets = () => {
 		<>
 			<div>
 				{list.map((item, index) => {
-					return <Card key={index} name={item.name} climate={item.climate} />;
+					return <Card key={index} item={item} type="planets" />;
 				})}
 			</div>
 		</>

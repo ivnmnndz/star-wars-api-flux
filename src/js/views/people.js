@@ -17,7 +17,7 @@ export const People = () => {
 		<>
 			<div>
 				{list.map((item, index) => {
-					return <Card key={index} name={item.name} birth_year={item.birth_year} />;
+					return <Card key={index} item={item} type="people" />;
 				})}
 			</div>
 		</>
