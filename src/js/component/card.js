@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-export function Card({ item, type }) {
+export function Card({ item, type, index }) {
 	return (
 		<>
 			<div className="card m-3 text-center align-items-center" style={{ width: "300px" }}>
 				{type} - {item.url}
-				<Link to={`/details/${item.url}`}>
+				<Link to={`/details/${btoa(item.url)}`}>
 					<div className="card-body">
 						<h5 className="card-title">{item.name}</h5>
 						{item.model ? <p className="card-text">{item.model}</p> : null}
