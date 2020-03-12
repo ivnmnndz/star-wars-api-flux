@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export function Jumbotron({ value, name }) {
 	return (
 		<>
-			<div className="jumbotron">
+			<div>
 				<span>{name}</span> -
 				{typeof value === "string" ? (
 					<span>{value}</span>

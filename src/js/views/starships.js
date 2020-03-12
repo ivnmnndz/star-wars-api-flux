@@ -10,7 +10,6 @@ export const Starships = () => {
 			.then(resp => resp.json())
 			.then(data => {
 				setList(data.results);
-				console.log(data.results);
 			});
 	}, []);
 
